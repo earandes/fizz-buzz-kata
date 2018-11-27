@@ -3,24 +3,16 @@ package com.kikermint;
 import static java.lang.String.valueOf;
 
 class FizzBuzz {
-    private Printer printer;
-
-    FizzBuzz(Printer printer) {
-        this.printer = printer;
-    }
-
-    void evaluate(int number) {
-        String print;
+    String evaluate(int number) {
         if (isFizzBuzz(number)) {
-            print = "FizzBuzz";
+            return "FizzBuzz";
         } else if (isFizz(number)) {
-            print = "Fizz";
+            return "Fizz";
         } else if (isBuzz(number)) {
-            print = "Buzz";
+            return "Buzz";
         } else {
-            print = valueOf(number);
+            return valueOf(number);
         }
-        printer.print(print);
     }
 
     private boolean isFizz(int number) {
